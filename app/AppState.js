@@ -1,3 +1,4 @@
+import { Gifts } from "./models/Gifts.js"
 import { EventEmitter } from './utils/EventEmitter.js'
 import { isValidProp } from './utils/IsValidProp.js'
 
@@ -11,8 +12,10 @@ class ObservableAppState extends EventEmitter {
   values = []
   socketData = []
 
-  /** @type {import('./models/Gifts.js').Gifts | null} */
-  gifts = null
+  /** @type {import('./models/Gifts.js').Gifts[]} */
+  gifts = []
+
+  giphySearch = null
 
   // Used to load initial data
   init() {

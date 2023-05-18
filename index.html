@@ -60,7 +60,7 @@
         <div class="row">
           <div class="col-3">
             <h2>Gifted</h2>
-            <form action="" onsubmit="app.giphyController()">
+            <form action="" onsubmit="app.GiftsController.createGift()">
               <label class="form-label" for="tag">Tag</label>
               <input type="text" name="tag" />
 
@@ -68,18 +68,21 @@
                 >Url
                 <input type="text" name="url" />
               </label>
-              <button class="btn btn-primary m-2">Submit</button>
+              <button type="submit" class="btn btn-primary m-2">Submit</button>
             </form>
             <!-- end first form -->
-            <form action="" onsubmit="app.giphyController.searchGiphy()">
+            <form action="" onsubmit="earchGiphy()">
               <label class="form-label" for="search"
                 >Search Gifs
                 <input type="text" name="search" id="search" />
               </label>
             </form>
           </div>
-          <div class="row">
-            <div class="col-8" id="gifts"></div>
+
+          <!-- gifts -->
+          <div class="col-8">
+            <div class="row" id="gifts"></div>
+            <!-- end gift card -->
           </div>
         </div>
       </section>

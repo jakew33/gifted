@@ -14,7 +14,7 @@ export const api = axios.create({
 export const giphyApi = axios.create ({
     baseURL: 'http://api.giphy.com/v1/gifs',
     timeout: 8000,
-    arams: {api_key: 'vJS7EDEaxB3b24wdFgy9dZs9lnhsSMNb'}
+    params: {api_key: 'vJS7EDEaxB3b24wdFgy9dZs9lnhsSMNb'}
 })
 
 

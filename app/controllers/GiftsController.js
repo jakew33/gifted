@@ -28,6 +28,7 @@ async createGift(){
     console.log(formData);
     // @ts-ignore
     form.reset()
+    await giftsService.createGift(formData)
   } catch (error) {
     Pop.error(error)
   }

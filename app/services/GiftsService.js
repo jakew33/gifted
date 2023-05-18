@@ -5,6 +5,12 @@ import { api } from "./AxiosService.js";
 
 
 class GiftsService {
+  async createGift(formData) {
+    const res = await api.post(`api/gifts`, formData) 
+    const newGift = new Gifts(res.data)
+    AppState.gifts.push(newGift)
+    AppState.emit('gifts')
+    }
   async openGift(id) {
     const gift = AppState.gifts.find(g => g.id == id)
     // @ts-ignore

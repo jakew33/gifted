@@ -26,6 +26,8 @@ async createGift(){
     const form = window.event?.target
     const formData = getFormData(form)
     console.log(formData);
+    // @ts-ignore
+    form.reset()
   } catch (error) {
     Pop.error(error)
   }
